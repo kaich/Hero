@@ -173,6 +173,8 @@ open class HeroTransition: NSObject {
 
   internal var toView: UIView? { return toViewController?.view }
   internal var fromView: UIView? { return fromViewController?.view }
+  
+  internal var originalTransitionView: UIView?
 
   public override init() { super.init() }
 

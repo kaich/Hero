@@ -28,6 +28,9 @@ extension HeroTransition {
     state = .starting
 
     if let toView = toView, let fromView = fromView {
+      if isPresenting {
+          originalTransitionView = fromView.superview
+      }
       if let toViewController = toViewController, let transitionContext = transitionContext {
         toView.frame = transitionContext.finalFrame(for: toViewController)
       } else {
